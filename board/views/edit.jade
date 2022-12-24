@@ -1,0 +1,22 @@
+doctype html 
+html 
+    head
+        meta(charset='utf8')
+
+    body 
+        h1 게시글 수정
+
+        form(action='/boardlist' method )
+            input(type='submit' value = '게시판 목록으로 돌아가기')
+
+        form(action='/loginhandling' method = 'post')
+            input(type='submit' value = '로그아웃' name = 'logout')        
+
+        form(action='/editHandling' method = 'post')
+            p 
+                input(type='text' style='width : 700px' name = 'title' value = writing.title)
+            p 
+                input(type='text' style='width : 700px; height :400px' name = 'content' value = writing.content)
+            p    
+                input(type='submit' style = 'width : 700px' value = '수정완료' )
+                input(type='hidden' value = id name = 'id')

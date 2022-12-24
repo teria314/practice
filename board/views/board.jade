@@ -1,0 +1,26 @@
+doctype html 
+html 
+    head 
+        meta(charset='utf8')
+    body 
+        h1 게시글
+
+        form(action='/boardlist' method )
+            input(type='submit' value = '게시판 목록으로 돌아가기')
+
+        p 
+            table(border = '1')
+                tr
+                    td(style='width : 500px')= writing.title
+                    td(style='width : 200px')= '작성자 : ' + writing.writer_nickname
+                tr 
+                    td(style='width : 700px; height : 400px')= writing.content
+                    td
+                        p
+                            form(action = '/edit' method = 'post')
+                                input(type='submit', value = '수정' name = 'edit')
+                                input(type='hidden', value = id name = 'id')
+                        p
+                            form(action='/deleteHandling' method = 'post')
+                                input(type='submit', value = '삭제')
+                                input(type='hidden', value = id name = 'id')

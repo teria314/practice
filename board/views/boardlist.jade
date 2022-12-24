@@ -1,0 +1,27 @@
+doctype html
+html
+    head 
+        meta(charset='utf8')
+    body 
+        h1 게시판
+
+        form(action='/loginhandling' method = 'post')
+            input(type='submit' value = '로그아웃' name = 'logout')
+        p
+            form(action='/add')
+                input(type='submit' value = '게시글 작성')
+        
+        p
+            table(border='1')
+                th(style = 'width:500px') 글 제목
+                th 작성자
+                th 작성시간
+                
+                -for(i = 0; i<list.length; i++)
+                    tr
+                        td
+                            a(href = '/board/'+i)= list[i].title
+                        td= list[i].writer_nickname
+                        td= list[i].time
+
+
