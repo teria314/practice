@@ -1,0 +1,29 @@
+doctype html
+html
+    head
+        meta(charset = 'utf8')
+    body
+        h1 login
+        form(action='/loginhandling' method = 'post')
+            p
+                input(type='text' name='id' placeholder='ID')
+            
+            p
+                input(type='password' name='pw' placeholder='PASSWORD')
+
+            p
+                input(type='submit' value = 'login')
+            
+
+        form(action='/googleloginhandling')
+            p
+                input(type='submit' value = 'login with google')
+            
+        form(action='/join')
+            p
+                input(type='submit' value = '회원가입하러 가기')
+        
+
+
+
+
